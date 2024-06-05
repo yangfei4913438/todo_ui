@@ -18,11 +18,7 @@ export const useTodoStore = defineStore('todo', {
   actions: {
     // 初始化数据
     async fetchTodos() {
-      const data = await fetchTodoList()
-      this.todos = data.sort(
-        (a: TodoReturn, b: TodoReturn) =>
-          new Date(b.createTime).getTime() - new Date(a.createTime).getTime()
-      )
+      this.todos = await fetchTodoList()
     },
     // 新增一条todo
     async addTodo(text: string) {

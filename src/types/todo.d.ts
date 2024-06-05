@@ -21,9 +21,9 @@ interface Todo {
 // 后端返回的数据
 interface TodoReturn extends Todo {
   // 创建时间
-  createTime: string
+  createdTime: string
   // 更新时间
-  updateTime: string
+  updatedTime: string
 }
 
 interface TodoState {
